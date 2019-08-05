@@ -18,12 +18,19 @@ let world, engine, render
 let mouse, mConstraint, toBeMovedBody
 
 // Game objects
+let levels = []
+let boxes = []
+let ground
+let enemies = []
+let bird
+let slingshot
 
 // Buttons and HomePage
 let playButton
 let soundButton
 
 // Score data
+let level = 1
 let score = 0
 let highScore = 0
 let highscoreGained = false
@@ -34,8 +41,14 @@ let startingLives
 let lives
 
 // Images
+let enemyImages = []
+let dotImage
+let boxImage
 let imgLife
 let imgBackground
+
+// options
+const birdCordinates = { x: 300, y: 400, radius: 30 }
 
 // Audio
 let sndMusic
@@ -70,6 +83,14 @@ function preload() {
     if (Koji.config.images.background !== "") {
         imgBackground = loadImage(Koji.config.images.background)
     }
+
+    // Load images
+    dotImage = loadImage(Koji.config.images.hitter)
+    boxImage = loadImage(Koji.config.images.box)
+    enemyImages[0] = loadImage(Koji.config.images.enemybird1)
+    enemyImages[1] = loadImage(Koji.config.images.enemybird2)
+    enemyImages[2] = loadImage(Koji.config.images.enemybird3)
+    enemyImages[3] = loadImage(Koji.config.images.enemybird4)
 
     imgLife = loadImage(Koji.config.images.lifeIcon)
     soundImage = loadImage(Koji.config.images.soundImage)
@@ -134,6 +155,10 @@ function setup() {
     soundButton = new SoundButton()
 
     // SETUP
+    // levels[level] = new Level(level)
+    // ground = new Ground(width/2, height - 10, width, 20, { fill: { r: 0, g: 255, b: 0 } })
+    // bird = new Bird(birdCordinates.x, birdCordinates.y, birdCordinates.radius, { image: dotImage, type: 'hitter' })
+    // slingshot = new Slingshot(birdCordinates.x, birdCordinates.y, bird.body)
 
     gameBeginning = true
 
