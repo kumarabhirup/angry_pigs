@@ -1,13 +1,11 @@
 {
   "strings": {
     "objectShape": "rectangle",
-    "scoreIncreaseSpeed": "2",
-    "scoreDecreaseSpeed": "1",
     "fontFamily": "https://fonts.googleapis.com/css?family=Russo+One",
-    "title": "Don't touch the ground!",
-    "instructions1": "Drag the platform",
-    "instructions2": "Don't let Spongebob hit the ground",
-    "instructions3": "Keep him afloat for as long as you can",
+    "title": "Angry Pigs 🐷",
+    "instructions1": "Drag the pig",
+    "instructions2": "Hit as many birds as you can",
+    "instructions3": "The more you hit, the more you score!",
     "gameOverText": "GAME OVER",
     "highScoreText": "High Score:",
     "playButtonText": "PLAY NOW",
@@ -17,89 +15,86 @@
     "health": "4",
     "lives": "4"
   },
-  "@@editor": [
-    {
-      "key": "strings",
-      "name": "Game Settings",
-      "icon": "💡",
-      "source": "strings.json",
-      "fields": [
-        {
-          "key": "objectShape",
-          "name": "Shape of the object",
-          "type": "text",
-          "description": "Shape of the object to dodge. Either `circle` or `rectangle`, else see an error."
-        },
-        {
-          "key": "scoreIncreaseSpeed",
-          "name": "Score Increase Speed",
-          "type": "text",
-          "description": "Number to increase the score by when ball is in the air."
-        },
-        {
-          "key": "scoreDecreaseSpeed",
-          "name": "Score Decrease Speed",
-          "type": "text",
-          "description": "Number to decrease the score by when ball is touching the platform."
-        },
-        {
-          "key": "title",
-          "name": "Game Title",
-          "description": "The title that is displayed in the start menu",
-          "type": "text"
-        },
-        {
-          "key": "instructions1",
-          "name": "Game Instructions 1",
-          "type": "text"
-        },
-        {
-          "key": "instructions2",
-          "name": "Game Instructions 2",
-          "type": "text"
-        },
-        {
-          "key": "instructions3",
-          "name": "Game Instructions 3",
-          "type": "text"
-        },
-        {
-          "key": "fontFamily",
-          "name": "Font Family",
-          "description": "Google fonts link to font to use in the game",
-          "type": "text"
-        },
-        {
-          "key": "playButtonText",
-          "name": "Play Button Text",
-          "description": "Label on the Play Button",
-          "type": "text"
-        },
-        {
-          "key": "scoreText",
-          "name": "Score Text",
-          "description": "Default: 'Score:'",
-          "type": "text"
-        },
-        {
-          "key": "highscoreText",
-          "name": "High Score Text",
-          "description": "Default: 'High Score:'",
-          "type": "text"
-        },
-        {
-          "key": "highscoreGainedText",
-          "name": "High Score Gained Text",
-          "description": "When you get a new high score",
-          "type": "text"
-        },
-        {
-          "key": "lives",
-          "name": "Max Lives",
-          "description": "How many lives you initially have",
-          "type": "text"
-        }
-      ]
-    }
-  ]
+  "@@editor": [{
+    "key": "strings",
+    "name": "Game Settings",
+    "icon": "💡",
+    "source": "strings.json",
+    "fields": [{
+        "key": "objectShape",
+        "name": "Shape of the object",
+        "type": "text",
+        "description": "Shape of the object to dodge. Either `circle` or `rectangle`, else see an error."
+      },
+      {
+        "key": "scoreIncreaseSpeed",
+        "name": "Score Increase Speed",
+        "type": "text",
+        "description": "Number to increase the score by when ball is in the air."
+      },
+      {
+        "key": "scoreDecreaseSpeed",
+        "name": "Score Decrease Speed",
+        "type": "text",
+        "description": "Number to decrease the score by when ball is touching the platform."
+      },
+      {
+        "key": "title",
+        "name": "Game Title",
+        "description": "The title that is displayed in the start menu",
+        "type": "text"
+      },
+      {
+        "key": "instructions1",
+        "name": "Game Instructions 1",
+        "type": "text"
+      },
+      {
+        "key": "instructions2",
+        "name": "Game Instructions 2",
+        "type": "text"
+      },
+      {
+        "key": "instructions3",
+        "name": "Game Instructions 3",
+        "type": "text"
+      },
+      {
+        "key": "fontFamily",
+        "name": "Font Family",
+        "description": "Google fonts link to font to use in the game",
+        "type": "text"
+      },
+      {
+        "key": "playButtonText",
+        "name": "Play Button Text",
+        "description": "Label on the Play Button",
+        "type": "text"
+      },
+      {
+        "key": "scoreText",
+        "name": "Score Text",
+        "description": "Default: 'Score:'",
+        "type": "text"
+      },
+      {
+        "key": "highscoreText",
+        "name": "High Score Text",
+        "description": "Default: 'High Score:'",
+        "type": "text"
+      },
+      {
+        "key": "highscoreGainedText",
+        "name": "High Score Gained Text",
+        "description": "When you get a new high score",
+        "type": "text"
+      },
+      {
+        "key": "lives",
+        "name": "Max Lives",
+        "description": "How many lives you initially have",
+        "type": "text"
+      }
+    ]
+  }]
 }

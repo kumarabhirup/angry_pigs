@@ -5,9 +5,9 @@
     "playButtonTextColor": "#2383C2",
     "playButtonColor": "#EFF3F5",
     "scoreColor": "#000000",
-    "highscoreColor": "#FFED21",
-    "titleColor": "#EFF3F5",
-    "instructionsColor": "#FFFF00",
+    "highscoreColor": "#00008B",
+    "titleColor": "#000000",
+    "instructionsColor": "#00008B",
     "playButtonHoverColor": "#6CADD7",
     "playButtonClickColor": "#EFF3F5"
   },

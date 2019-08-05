@@ -1,11 +1,15 @@
 {
   "images": {
-    "objectImage": "https://i.ibb.co/gSzf3sZ/spongebob.png",
-    "platformImage": "https://img.freepik.com/free-photo/abstract-painted-yellow-watercolor-background-paper-texture_23-2147835996.jpg?size=626&ext=jpg",
+    "hitter": "https://vignette.wikia.nocookie.net/angry-birds-universe/images/5/55/Minion_pig_copy.png",
+    "enemybird1": "https://i.ibb.co/xJP0KtS/enemy1.png",
+    "enemybird2": "https://i.ibb.co/pJKxgCn/enemy1.jpg",
+    "enemybird3": "https://i.ibb.co/f47QnzX/enemy3.png",
+    "enemybird4": "https://i.ibb.co/hRnMWV5/enemy4.png",
+    "box": "https://i.ibb.co/wz3LCCz/tntbox.png",
+    "background": "https://i.ibb.co/6FCHX9B/sky-Background.png",
     "soundImage": "https://i.imgur.com/rtFppa8.png",
     "muteImage": "https://i.imgur.com/AR7C733.png",
-    "lifeIcon": "https://i.imgur.com/SKksWaw.png",
-    "background": "https://i.ibb.co/qYzbsPY/background.jpg"
+    "lifeIcon": "https://i.imgur.com/SKksWaw.png"
   },
   "@@editor": [{
     "key": "images",
