@@ -1,5 +1,3 @@
-/* global Koji, GameObject */
-
 class Ground extends GameObject {
   constructor (
     cordinates = {x: null, y: null}, // positioning

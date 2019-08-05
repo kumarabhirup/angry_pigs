@@ -1,5 +1,3 @@
-/* global p5, Koji, Matter */
-
 // imports
 const { 
   Engine,
@@ -20,9 +18,6 @@ let world, engine, render
 let mouse, mConstraint, toBeMovedBody
 
 // Game objects
-let playableObject
-let platform
-let ground, groundLeft, groundRight, groundTop
 
 // Buttons and HomePage
 let playButton
@@ -41,8 +36,6 @@ let lives
 // Images
 let imgLife
 let imgBackground
-let imgObject
-let imgPlatform
 
 // Audio
 let sndMusic
@@ -78,8 +71,6 @@ function preload() {
         imgBackground = loadImage(Koji.config.images.background)
     }
 
-    imgObject = Koji.config.images.objectImage ? loadImage(Koji.config.images.objectImage) : null
-    imgPlatform = Koji.config.images.platformImage ? loadImage(Koji.config.images.platformImage) : null
     imgLife = loadImage(Koji.config.images.lifeIcon)
     soundImage = loadImage(Koji.config.images.soundImage)
     muteImage = loadImage(Koji.config.images.muteImage)
@@ -142,22 +133,7 @@ function setup() {
     playButton = new PlayButton()
     soundButton = new SoundButton()
 
-    ground = new Ground({ x: width / 2, y: height }, { width, height: 20 }, { shape: 'rectangle', color: { r: 255, g: 255, b: 255, a: 1 }, rotate: false, movable: false})
-    groundTop = new Ground({ x: width / 2, y: 0 }, { width, height: 150 }, { shape: 'rectangle', color: { r: 255, g: 255, b: 255, a: 1 }, rotate: false, movable: false})
-    groundLeft = new Ground({ x: 0, y: height / 2 }, { width: 10, height }, { shape: 'rectangle', color: { r: 255, g: 255, b: 255, a: 1 }, rotate: false, movable: false})
-    groundRight = new Ground({ x: width, y: height / 2 }, { width: 10, height }, { shape: 'rectangle', color: { r: 255, g: 255, b: 255, a: 1 }, rotate: false, movable: false})
-
-    platform = new Platform({ x: width / 2 , y: 200 }, { width: objSize * 8, height: objSize * 0.8 }, { shape: 'rectangle', image: imgPlatform, color: { r: 0, g: 0, b: 0, a: 1 }, rotate: true, movable: true })
-    
-    // The initial playable object. 
-    // * If you want the playable objects be constant accross the games,
-    // * Keep these same GameObject settings for the new GameObject that appears after losing life
-    // you can make ensure that in app/game.js file
-    playableObject = new GameObject (
-        { x: width / 2, y: 170 },
-        { radius: objSize * 2, width: objSize * 3, height: objSize * 3 }, // radius works for circle shape, width and height work for rectangular shape
-        { shape: Koji.config.strings.objectShape, image: imgObject, color: { r: 0, g: 255, b: 255, a: 1 }, rotate: true, movable: false } // either `rectangle` or `circle` shape allowed. Else see some error.
-    )
+    // SETUP
 
     gameBeginning = true
 
@@ -166,7 +142,6 @@ function setup() {
     // Mouse moving
     mouse = Mouse.create(canvas.elt)
     mouse.pixelRatio = pixelDensity() // See https://www.youtube.com/watch?v=W-ou_sVlTWk. Watch at 7:08, to understand what this line of code means
-    
     mConstraint = MouseConstraint.create(engine, { mouse })
 }
 
@@ -178,7 +153,7 @@ function draw() {
     } else {
         background(Koji.config.colors.backgroundColor)
     }
-    // console.log((mConstraint && mConstraint.body) ? mConstraint.body : null)
+
     // Draw UI
     if (gameOver || gameBeginning) {
         gameBeginningOver()

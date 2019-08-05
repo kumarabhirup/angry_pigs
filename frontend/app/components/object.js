@@ -1,5 +1,3 @@
-/* global p5, Koji, Matter, world, imgObject */
-
 const { Bodies, World } = Matter
 
 /**
